@@ -1,0 +1,52 @@
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+pre {
+    font-size: larger;
+}
+
+button {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    background-color: lightgray;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.newTask-block {
+    display: flex;
+    align-items: center;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
+    background-color: white;
+}
+
+.form-error-msg {
+    z-index: -1;
+    color: red;
+    font-size: x-small;
+    padding-top: 4px;
+}
+
+.form-error-msg.shown {
+    z-index: 1;
+}
