@@ -9,35 +9,8 @@ p {
 }
 
 pre {
-    font-size: larger;
-}
-
-button {
-    font-size: 14px;
-    font-weight: 700;
-    color: black;
-    background-color: lightgray;
-    padding: 6px;
-    border-radius: 5px;
-    margin-top: 12px;
-    margin-right: 12px;
-    margin-left: 12px;
-}
-
-button:hover{
-    cursor: pointer;
-}
-
-.newTask-block {
-    display: flex;
-    align-items: center;
-}
-
-.input-block {
-    display: flex;
-    flex-direction: column;
-    padding-top: 18px;
-    background-color: white;
+    line-height: 1.5;
+    font-size: large;
 }
 
 .form-error-msg {
@@ -50,3 +23,78 @@ button:hover{
 .form-error-msg.shown {
     z-index: 1;
 }
+
+/* ============================================================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    font-size: 18px;
+    background-color: #66deb2;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.form {
+    background: #fff;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.form__input {
+    min-height: 25px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid;
+}
+
+.form__btn {
+    background: #0be69d;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+.todo-item {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todo-item--checked {
+    text-decoration: line-through;
+}
+.todo-item__description {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+.todo-item__delete {
+    background: #0be69d;
+    border: none;
+    cursor: pointer;
+    width: 95px;
+    padding: 10px;
+}
+
+/* js--form */
+/* js--form__input */
+/* js--todos-wrapper  */

@@ -12,29 +12,33 @@
     <pre>
     Доробити TODO лист, в якому буде можливість:
 
-    Додати завдання
-    Видалити завдання
-    Відзначити як виконану
-    Усі дані повинні зберегтися після перезавантаження сторінки.
+        1. Додати завдання
+        2. Видалити завдання
+        3. Відзначити як виконану
+        4. Усі дані повинні зберегтися після перезавантаження сторінки.
     </pre>
     </p>
-    <div class="planner">
-        <ul class="TODO-list">
-
-        </ul>
-        <form  id="add-task">
-            <div class="newTask-block">
-                <div class="input-block">
-                    <input type="text" name = 'newTask' placeholder="Додати нове завдання" required>
-                    <span class="form-error-msg">Назва завдання НЕ може бути порожньою</span>
-                </div>
-                <button type="submit" class="add-btn">
-                    Додати
-                </button>
-            </div>
+   
+    <div class="container">
+        <h1>ToDoList</h1>
+        <form class="form js--form">
+            <input type="text" name="value" required class="form__input js--form__input">
+            <span class="form-error-msg">Назва завдання НЕ може бути порожньою</span>
+            <button class="form__btn">Додати</button>
         </form>
+        <ul class="js--todos-wrapper">
+        <li class="todo-item">
+            <input type="checkbox">
+            <span class="todo-item__description">Text</span>
+            <button class="todo-item__delete">Видалити</button>
+        </li>
+        <li class="todo-item todo-item--checked">
+            <input type="checkbox">
+            <span class="todo-item__description">Text</span>
+            <button class="todo-item__delete">Видалити</button>
+        </li>
+        </ul>
     </div>
-
     <script src="./index.js"></script>
 </body>
 </html>
