@@ -58,12 +58,11 @@ function handleAddTodoItem(event) {
         currentTodoList.push({ text: taskText, checked: false });
         saveTodoList(); 
         renderTodoList(); 
-        
-        addTaskInput.value = '';
-    } else {
+    } 
+    else {
         addTaskErrorMsg.classList.add('shown');
-        addTaskInput.focus();
     }
+    event.target.reset();
 }
 
 function handleTodoListClick(event) {
@@ -77,13 +76,14 @@ function handleTodoListClick(event) {
     const index = Array.from(tasksList.children).indexOf(listItem); 
 
     if (clickedElement.classList.contains('todo-item__delete')) {
-        if (index > -1) {
+        if (index >= 0) {
             currentTodoList.splice(index, 1); 
             saveTodoList(); 
             listItem.remove(); 
         }
-    } else if (clickedElement.type === 'checkbox') {
-        if (index > -1 && currentTodoList[index]) {
+    } 
+    else if (clickedElement.type === 'checkbox') {
+        if (index >= 0 && currentTodoList[index]) {
             currentTodoList[index].checked = clickedElement.checked; 
             saveTodoList(); 
             listItem.classList.toggle('todo-item--checked', clickedElement.checked);
